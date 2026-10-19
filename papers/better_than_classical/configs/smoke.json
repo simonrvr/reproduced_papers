@@ -1,0 +1,10 @@
+{
+  "description": "Smoke run: one tiny scaffold run that only checks runtime wiring.",
+
+  "seed": 42,
+  "outdir": "outdir",
+  "device": "cpu",
+  "training": {
+    "epochs": 1
+  }
+}

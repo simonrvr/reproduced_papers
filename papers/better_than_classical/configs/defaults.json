@@ -1,0 +1,25 @@
+{
+    "description": "Scaffold defaults for the Bowles, Ahmed & Schuld (2024) QML benchmark reproduction. Lightweight until Phase 02 replaces the placeholder runner.",
+
+    "seed": 42,
+    "dtype": "float32",
+    "outdir": "outdir",
+    "device": "cpu",
+    "dataset": {
+        "name": "linearly_separable",
+        "root": null,
+        "split": "train",
+        "batch_size": 32
+    },
+    "model": {
+        "name": "SVC",
+        "params": {}
+    },
+    "training": {
+        "epochs": 10,
+        "optimizer": "adam",
+        "lr": 1e-3,
+        "weight_decay": 0.0
+    },
+    "logging": {"level": "info", "save_config_snapshot": true}
+}

@@ -1,0 +1,18 @@
+# Dependencies for the better_than_classical reproduction.
+# Versions are the ones verified in the reproduction environment (system
+# Python 3.13.15, 2026-10-19). The original qml-benchmarks code pinned older
+# releases (pennylane~=0.34, jax~=0.4, numpy~=1.23); see LOG.md (R16).
+numpy>=2.5
+scipy>=1.18
+pandas>=3.0
+matplotlib>=3.11
+scikit-learn>=1.9
+pennylane>=0.45
+jax>=0.11
+jaxlib>=0.11
+optax>=0.2.8
+flax>=0.12.10
+torch>=2.12
+torchvision>=0.29.1
+h5py>=3.16
+pytest
