@@ -7,8 +7,11 @@ from pathlib import Path
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 REPO_ROOT = PROJECT_DIR.parent.parent
-if str(REPO_ROOT) not in sys.path:
-    sys.path.insert(0, str(REPO_ROOT))
+# The repo root provides ``runtime_lib``; ``papers/`` makes
+# ``better_than_classical.lib`` importable at module level in tests.
+for _path in (REPO_ROOT, PROJECT_DIR.parent):
+    if str(_path) not in sys.path:
+        sys.path.insert(0, str(_path))
 
 from runtime_lib.cli import build_cli_parser  # noqa: E402
 from runtime_lib.config import load_config  # noqa: E402

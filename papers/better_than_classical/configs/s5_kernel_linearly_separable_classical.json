@@ -1,0 +1,26 @@
+{
+  "description": "Stage S5: SVC and the LogisticRegression floor on linearly separable, d in {2,4,6,8}.",
+  "experiment": {
+    "kind": "grid_search",
+    "stage": "S5"
+  },
+  "dataset": {
+    "name": "linearly_separable",
+    "param": 2
+  },
+  "model": {
+    "name": "SVC"
+  },
+  "sweep": {
+    "models": [
+      "SVC",
+      "LogisticRegression"
+    ],
+    "dataset_params": [
+      2,
+      4,
+      6,
+      8
+    ]
+  }
+}

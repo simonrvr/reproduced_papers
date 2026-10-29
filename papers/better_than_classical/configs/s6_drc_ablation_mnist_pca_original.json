@@ -1,0 +1,27 @@
+{
+  "description": "Stage S6 (E6, Fig. 15): DataReuploading ablations NoScaling, NoTrainableEmbedding, NoCost on mnist pca d in {2,4,6,8} with the parent grid (the parent comes from S3).",
+  "experiment": {
+    "kind": "grid_search",
+    "stage": "S6"
+  },
+  "dataset": {
+    "name": "mnist_pca",
+    "param": 2
+  },
+  "model": {
+    "name": "DataReuploadingClassifierNoScaling"
+  },
+  "sweep": {
+    "models": [
+      "DataReuploadingClassifierNoScaling",
+      "DataReuploadingClassifierNoTrainableEmbedding",
+      "DataReuploadingClassifierNoCost"
+    ],
+    "dataset_params": [
+      2,
+      4,
+      6,
+      8
+    ]
+  }
+}

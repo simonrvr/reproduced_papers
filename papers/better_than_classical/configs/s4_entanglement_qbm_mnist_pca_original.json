@@ -1,0 +1,24 @@
+{
+  "description": "Stage S4 (E5, Fig. 13): QuantumBoltzmannMachine and its released separable variant on mnist pca, d in {2,4} only (density-matrix cost).",
+  "experiment": {
+    "kind": "grid_search",
+    "stage": "S4"
+  },
+  "dataset": {
+    "name": "mnist_pca",
+    "param": 2
+  },
+  "model": {
+    "name": "QuantumBoltzmannMachine"
+  },
+  "sweep": {
+    "models": [
+      "QuantumBoltzmannMachine",
+      "QuantumBoltzmannMachineSeparable"
+    ],
+    "dataset_params": [
+      2,
+      4
+    ]
+  }
+}

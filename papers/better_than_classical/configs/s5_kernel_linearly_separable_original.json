@@ -1,0 +1,28 @@
+{
+  "description": "Stage S5 (E2+E4): kernel-family quantum models and the separable kernel on linearly separable, d in {2,4,6,8}.",
+  "experiment": {
+    "kind": "grid_search",
+    "stage": "S5"
+  },
+  "dataset": {
+    "name": "linearly_separable",
+    "param": 2
+  },
+  "model": {
+    "name": "IQPKernelClassifier"
+  },
+  "sweep": {
+    "models": [
+      "IQPKernelClassifier",
+      "ProjectedQuantumKernel",
+      "QuantumKitchenSinks",
+      "SeparableKernelClassifier"
+    ],
+    "dataset_params": [
+      2,
+      4,
+      6,
+      8
+    ]
+  }
+}

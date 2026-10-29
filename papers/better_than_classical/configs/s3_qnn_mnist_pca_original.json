@@ -1,0 +1,30 @@
+{
+  "description": "Stage S3 (E1+E4): QNN-family quantum models and the separable QNN on mnist pca, d in {2,4,6,8}; paper grids, 5-fold CV, retrain seeds 0-4.",
+  "experiment": {
+    "kind": "grid_search",
+    "stage": "S3"
+  },
+  "dataset": {
+    "name": "mnist_pca",
+    "param": 2
+  },
+  "model": {
+    "name": "CircuitCentricClassifier"
+  },
+  "sweep": {
+    "models": [
+      "CircuitCentricClassifier",
+      "DataReuploadingClassifier",
+      "DressedQuantumCircuitClassifier",
+      "IQPVariationalClassifier",
+      "TreeTensorClassifier",
+      "SeparableVariationalClassifier"
+    ],
+    "dataset_params": [
+      2,
+      4,
+      6,
+      8
+    ]
+  }
+}

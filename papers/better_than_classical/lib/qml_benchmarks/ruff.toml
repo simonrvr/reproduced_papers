@@ -1,0 +1,10 @@
+# Vendored upstream code (XanaduAI/qml-benchmarks, Apache-2.0): kept as close
+# to upstream as possible so PORTING.md's diff stays minimal. Not linted or
+# reformatted; compat.py is the only file written for this reproduction.
+extend = "../../../../pyproject.toml"
+
+[lint]
+ignore = ["ALL"]
+
+[format]
+exclude = ["models/*.py", "model_utils.py", "hyperparameter_settings.py"]

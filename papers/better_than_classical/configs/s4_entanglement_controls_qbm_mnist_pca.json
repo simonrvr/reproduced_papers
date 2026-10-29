@@ -1,0 +1,23 @@
+{
+  "description": "Stage S4 control added by this reproduction: QuantumBoltzmannMachine with independent ZZ couplings (paper Eq. C8), mnist pca d in {2,4}.",
+  "experiment": {
+    "kind": "grid_search",
+    "stage": "S4"
+  },
+  "dataset": {
+    "name": "mnist_pca",
+    "param": 2
+  },
+  "model": {
+    "name": "QuantumBoltzmannMachineIndependentZZ"
+  },
+  "sweep": {
+    "models": [
+      "QuantumBoltzmannMachineIndependentZZ"
+    ],
+    "dataset_params": [
+      2,
+      4
+    ]
+  }
+}

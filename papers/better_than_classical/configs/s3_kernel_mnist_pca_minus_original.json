@@ -1,0 +1,28 @@
+{
+  "description": "Stage S3 (E2+E4): kernel-family quantum models and the separable kernel on mnist pca- (seeded 250/250 subsample without replacement, documented deviation), d in {2,4,6,8}.",
+  "experiment": {
+    "kind": "grid_search",
+    "stage": "S3"
+  },
+  "dataset": {
+    "name": "mnist_pca_minus",
+    "param": 2
+  },
+  "model": {
+    "name": "IQPKernelClassifier"
+  },
+  "sweep": {
+    "models": [
+      "IQPKernelClassifier",
+      "ProjectedQuantumKernel",
+      "QuantumKitchenSinks",
+      "SeparableKernelClassifier"
+    ],
+    "dataset_params": [
+      2,
+      4,
+      6,
+      8
+    ]
+  }
+}

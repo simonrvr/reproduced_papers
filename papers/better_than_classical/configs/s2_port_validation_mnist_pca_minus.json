@@ -1,0 +1,38 @@
+{
+  "description": "Stage S2: port validation of the kernel family on the authors' exact mnist pca- samples (released only for d=2 and d=10), released best hyperparameters, seeds 0-4.",
+  "experiment": {
+    "kind": "score_best",
+    "stage": "S2"
+  },
+  "dataset": {
+    "name": "mnist_pca_minus_released",
+    "param": 2
+  },
+  "model": {
+    "name": "IQPKernelClassifier"
+  },
+  "score_best": {
+    "released_benchmark": "mnist_pca_minus",
+    "score_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "fixed_params": {}
+  },
+  "sweep": {
+    "models": [
+      "IQPKernelClassifier",
+      "ProjectedQuantumKernel",
+      "QuantumKitchenSinks",
+      "SeparableKernelClassifier",
+      "SVC"
+    ],
+    "dataset_params": [
+      2,
+      10
+    ]
+  }
+}

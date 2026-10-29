@@ -1,0 +1,26 @@
+{
+  "description": "Stage S3: classical kernel-family baselines on mnist pca- (SVC as in the paper; LogisticRegression floor added), d in {2,4,6,8}.",
+  "experiment": {
+    "kind": "grid_search",
+    "stage": "S3"
+  },
+  "dataset": {
+    "name": "mnist_pca_minus",
+    "param": 2
+  },
+  "model": {
+    "name": "SVC"
+  },
+  "sweep": {
+    "models": [
+      "SVC",
+      "LogisticRegression"
+    ],
+    "dataset_params": [
+      2,
+      4,
+      6,
+      8
+    ]
+  }
+}

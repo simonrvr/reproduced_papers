@@ -1,25 +1,35 @@
 {
-    "description": "Scaffold defaults for the Bowles, Ahmed & Schuld (2024) QML benchmark reproduction. Lightweight until Phase 02 replaces the placeholder runner.",
-
-    "seed": 42,
-    "dtype": "float32",
-    "outdir": "outdir",
-    "device": "cpu",
-    "dataset": {
-        "name": "linearly_separable",
-        "root": null,
-        "split": "train",
-        "batch_size": 32
-    },
-    "model": {
-        "name": "SVC",
-        "params": {}
-    },
-    "training": {
-        "epochs": 10,
-        "optimizer": "adam",
-        "lr": 1e-3,
-        "weight_decay": 0.0
-    },
-    "logging": {"level": "info", "save_config_snapshot": true}
+  "description": "Lightweight runnable default: one grid-search cell (SVC on linearly separable d=2, paper grid, 5-fold CV, 5 retrain seeds). Other configs overlay this file.",
+  "seed": 42,
+  "dtype": null,
+  "outdir": "outdir",
+  "device": "cpu",
+  "experiment": {
+    "kind": "grid_search",
+    "stage": "defaults"
+  },
+  "dataset": {
+    "name": "linearly_separable",
+    "param": 2,
+    "root": null,
+    "subsample_seed": 0
+  },
+  "model": {
+    "name": "SVC"
+  },
+  "grid_search": {
+    "grid": "paper",
+    "fixed_params": {},
+    "search_seed": 42,
+    "score_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "logging": {
+    "level": "info"
+  }
 }

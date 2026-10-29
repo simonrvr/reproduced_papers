@@ -1,0 +1,26 @@
+{
+  "description": "Stage S3: classical QNN-family baselines on mnist pca (MLPClassifier as in the paper; LogisticRegression floor added by this reproduction), d in {2,4,6,8}.",
+  "experiment": {
+    "kind": "grid_search",
+    "stage": "S3"
+  },
+  "dataset": {
+    "name": "mnist_pca",
+    "param": 2
+  },
+  "model": {
+    "name": "MLPClassifier"
+  },
+  "sweep": {
+    "models": [
+      "MLPClassifier",
+      "LogisticRegression"
+    ],
+    "dataset_params": [
+      2,
+      4,
+      6,
+      8
+    ]
+  }
+}

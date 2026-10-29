@@ -1,0 +1,24 @@
+{
+  "description": "Stage S7 controls added by this reproduction: WeiNet with bound circuits and WeiNet with a coherently applied filter, bars & stripes width 4 and 8.",
+  "experiment": {
+    "kind": "grid_search",
+    "stage": "S7"
+  },
+  "dataset": {
+    "name": "bars_and_stripes",
+    "param": 4
+  },
+  "model": {
+    "name": "WeiNetBoundCircuits"
+  },
+  "sweep": {
+    "models": [
+      "WeiNetBoundCircuits",
+      "WeiNetCoherentFilter"
+    ],
+    "dataset_params": [
+      4,
+      8
+    ]
+  }
+}

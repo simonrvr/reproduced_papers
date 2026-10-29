@@ -1,0 +1,24 @@
+{
+  "description": "Stage S7 (C10): released WeiNet and the ConvolutionalNeuralNetwork on bars & stripes, image width 4 and 8.",
+  "experiment": {
+    "kind": "grid_search",
+    "stage": "S7"
+  },
+  "dataset": {
+    "name": "bars_and_stripes",
+    "param": 4
+  },
+  "model": {
+    "name": "WeiNet"
+  },
+  "sweep": {
+    "models": [
+      "WeiNet",
+      "ConvolutionalNeuralNetwork"
+    ],
+    "dataset_params": [
+      4,
+      8
+    ]
+  }
+}

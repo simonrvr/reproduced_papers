@@ -1,0 +1,40 @@
+{
+  "description": "Stage S2: port validation on the authors' exact mnist pca data. Retrain each QNN-family model and MLP with the released best hyperparameters (seeds 0-4) and compare with the released 5-seed test accuracies. No grid search.",
+  "experiment": {
+    "kind": "score_best",
+    "stage": "S2"
+  },
+  "dataset": {
+    "name": "mnist_pca",
+    "param": 2
+  },
+  "model": {
+    "name": "DataReuploadingClassifier"
+  },
+  "score_best": {
+    "released_benchmark": "mnist_pca",
+    "score_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "fixed_params": {}
+  },
+  "sweep": {
+    "models": [
+      "CircuitCentricClassifier",
+      "DataReuploadingClassifier",
+      "DressedQuantumCircuitClassifier",
+      "IQPVariationalClassifier",
+      "TreeTensorClassifier",
+      "SeparableVariationalClassifier",
+      "MLPClassifier"
+    ],
+    "dataset_params": [
+      2,
+      6
+    ]
+  }
+}

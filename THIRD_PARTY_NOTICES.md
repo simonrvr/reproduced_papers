@@ -26,6 +26,14 @@ material it covers.
   or preserve PennyLane-compatible structures. Keep Apache notices where
   present.
 
+### qml-benchmarks (XanaduAI)
+
+- Upstream: <https://github.com/XanaduAI/qml-benchmarks> (commit 95e5a07)
+- License: Apache License 2.0
+- Notes: `papers/better_than_classical/lib/qml_benchmarks/` vendors a subset
+  of its models and training utilities with a directory-local `LICENSE`;
+  every change is listed in `lib/qml_benchmarks/PORTING.md` there.
+
 ### MerLin
 
 - Upstream: <https://github.com/merlinquantum/merlin>

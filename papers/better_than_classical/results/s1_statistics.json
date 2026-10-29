@@ -1,0 +1,357 @@
+{
+  "ablation_summary_d5_to_9": [
+    {
+      "comparison": "fig13_dqc",
+      "mean_diff_d5_9": 0.001052,
+      "n_d": 5,
+      "n_exceeding_2se": 0
+    },
+    {
+      "comparison": "fig13_drc",
+      "mean_diff_d5_9": 0.033481,
+      "n_d": 5,
+      "n_exceeding_2se": 5
+    },
+    {
+      "comparison": "fig13_qbm",
+      "mean_diff_d5_9": 0.01707,
+      "n_d": 3,
+      "n_exceeding_2se": 3
+    },
+    {
+      "comparison": "fig15_nocost",
+      "mean_diff_d5_9": 0.003113,
+      "n_d": 5,
+      "n_exceeding_2se": 1
+    },
+    {
+      "comparison": "fig15_noscaling",
+      "mean_diff_d5_9": 0.06816,
+      "n_d": 5,
+      "n_exceeding_2se": 5
+    },
+    {
+      "comparison": "fig15_notrainableembedding",
+      "mean_diff_d5_9": 0.072618,
+      "n_d": 5,
+      "n_exceeding_2se": 5
+    }
+  ],
+  "paired_vs_reference": [
+    {
+      "family": "qnn",
+      "frac_reference_at_least_as_good": 0.728155,
+      "mean_diff": 0.021031,
+      "mean_diff_ci_high": 0.033588,
+      "mean_diff_ci_low": 0.00972,
+      "median_diff": 0.003333,
+      "model": "DressedQuantumCircuitClassifier",
+      "n_datasets": 103,
+      "reference": "MLPClassifier",
+      "wilcoxon_p": 0.002081
+    },
+    {
+      "family": "qnn",
+      "frac_reference_at_least_as_good": 0.902256,
+      "mean_diff": 0.061964,
+      "mean_diff_ci_high": 0.077062,
+      "mean_diff_ci_low": 0.048219,
+      "median_diff": 0.025552,
+      "model": "DataReuploadingClassifier",
+      "n_datasets": 133,
+      "reference": "MLPClassifier",
+      "wilcoxon_p": 0.0
+    },
+    {
+      "family": "qnn",
+      "frac_reference_at_least_as_good": 0.857143,
+      "mean_diff": 0.035775,
+      "mean_diff_ci_high": 0.074682,
+      "mean_diff_ci_low": 0.006937,
+      "median_diff": 0.009569,
+      "model": "QuantumBoltzmannMachine",
+      "n_datasets": 21,
+      "reference": "MLPClassifier",
+      "wilcoxon_p": 0.009932
+    },
+    {
+      "family": "qnn",
+      "frac_reference_at_least_as_good": 0.981651,
+      "mean_diff": 0.134309,
+      "mean_diff_ci_high": 0.15313,
+      "mean_diff_ci_low": 0.116478,
+      "median_diff": 0.115457,
+      "model": "IQPVariationalClassifier",
+      "n_datasets": 109,
+      "reference": "MLPClassifier",
+      "wilcoxon_p": 0.0
+    },
+    {
+      "family": "qnn",
+      "frac_reference_at_least_as_good": 0.980583,
+      "mean_diff": 0.135743,
+      "mean_diff_ci_high": 0.157468,
+      "mean_diff_ci_low": 0.114822,
+      "median_diff": 0.102419,
+      "model": "QuantumMetricLearner",
+      "n_datasets": 103,
+      "reference": "MLPClassifier",
+      "wilcoxon_p": 0.0
+    },
+    {
+      "family": "qnn",
+      "frac_reference_at_least_as_good": 0.953846,
+      "mean_diff": 0.173097,
+      "mean_diff_ci_high": 0.200151,
+      "mean_diff_ci_low": 0.147238,
+      "median_diff": 0.13,
+      "model": "CircuitCentricClassifier",
+      "n_datasets": 130,
+      "reference": "MLPClassifier",
+      "wilcoxon_p": 0.0
+    },
+    {
+      "family": "qnn",
+      "frac_reference_at_least_as_good": 0.977444,
+      "mean_diff": 0.252166,
+      "mean_diff_ci_high": 0.276807,
+      "mean_diff_ci_low": 0.227515,
+      "median_diff": 0.256667,
+      "model": "TreeTensorClassifier",
+      "n_datasets": 133,
+      "reference": "MLPClassifier",
+      "wilcoxon_p": 0.0
+    },
+    {
+      "family": "qnn",
+      "frac_reference_at_least_as_good": 0.87218,
+      "mean_diff": 0.064408,
+      "mean_diff_ci_high": 0.077844,
+      "mean_diff_ci_low": 0.052033,
+      "median_diff": 0.046667,
+      "model": "SeparableVariationalClassifier",
+      "n_datasets": 133,
+      "reference": "MLPClassifier",
+      "wilcoxon_p": 0.0
+    },
+    {
+      "family": "qnn",
+      "frac_reference_at_least_as_good": 0.174757,
+      "mean_diff": -0.048285,
+      "mean_diff_ci_high": -0.03649,
+      "mean_diff_ci_low": -0.059988,
+      "median_diff": -0.05,
+      "model": "DressedQuantumCircuitClassifier",
+      "n_datasets": 103,
+      "reference": "SeparableVariationalClassifier",
+      "wilcoxon_p": 0.0
+    },
+    {
+      "family": "qnn",
+      "frac_reference_at_least_as_good": 0.37594,
+      "mean_diff": -0.002445,
+      "mean_diff_ci_high": 0.012653,
+      "mean_diff_ci_low": -0.016204,
+      "median_diff": -0.016667,
+      "model": "DataReuploadingClassifier",
+      "n_datasets": 133,
+      "reference": "SeparableVariationalClassifier",
+      "wilcoxon_p": 0.020147
+    },
+    {
+      "family": "qnn",
+      "frac_reference_at_least_as_good": 0.333333,
+      "mean_diff": -0.013673,
+      "mean_diff_ci_high": 0.016371,
+      "mean_diff_ci_low": -0.039583,
+      "median_diff": -0.023333,
+      "model": "QuantumBoltzmannMachine",
+      "n_datasets": 21,
+      "reference": "SeparableVariationalClassifier",
+      "wilcoxon_p": 0.035056
+    },
+    {
+      "family": "qnn",
+      "frac_reference_at_least_as_good": 0.834862,
+      "mean_diff": 0.067922,
+      "mean_diff_ci_high": 0.08727,
+      "mean_diff_ci_low": 0.049634,
+      "median_diff": 0.039167,
+      "model": "IQPVariationalClassifier",
+      "n_datasets": 109,
+      "reference": "SeparableVariationalClassifier",
+      "wilcoxon_p": 0.0
+    },
+    {
+      "family": "qnn",
+      "frac_reference_at_least_as_good": 0.757282,
+      "mean_diff": 0.067362,
+      "mean_diff_ci_high": 0.085952,
+      "mean_diff_ci_low": 0.049457,
+      "median_diff": 0.03,
+      "model": "QuantumMetricLearner",
+      "n_datasets": 103,
+      "reference": "SeparableVariationalClassifier",
+      "wilcoxon_p": 0.0
+    },
+    {
+      "family": "qnn",
+      "frac_reference_at_least_as_good": 0.746154,
+      "mean_diff": 0.108767,
+      "mean_diff_ci_high": 0.135538,
+      "mean_diff_ci_low": 0.083224,
+      "median_diff": 0.065,
+      "model": "CircuitCentricClassifier",
+      "n_datasets": 130,
+      "reference": "SeparableVariationalClassifier",
+      "wilcoxon_p": 0.0
+    },
+    {
+      "family": "qnn",
+      "frac_reference_at_least_as_good": 0.947368,
+      "mean_diff": 0.187758,
+      "mean_diff_ci_high": 0.211171,
+      "mean_diff_ci_low": 0.165157,
+      "median_diff": 0.17,
+      "model": "TreeTensorClassifier",
+      "n_datasets": 133,
+      "reference": "SeparableVariationalClassifier",
+      "wilcoxon_p": 0.0
+    },
+    {
+      "family": "kernel",
+      "frac_reference_at_least_as_good": 0.769231,
+      "mean_diff": 0.013885,
+      "mean_diff_ci_high": 0.021098,
+      "mean_diff_ci_low": 0.007142,
+      "median_diff": 0.013333,
+      "model": "ProjectedQuantumKernel",
+      "n_datasets": 117,
+      "reference": "SVC",
+      "wilcoxon_p": 5e-06
+    },
+    {
+      "family": "kernel",
+      "frac_reference_at_least_as_good": 0.811881,
+      "mean_diff": 0.037884,
+      "mean_diff_ci_high": 0.052122,
+      "mean_diff_ci_low": 0.024614,
+      "median_diff": 0.016667,
+      "model": "IQPKernelClassifier",
+      "n_datasets": 101,
+      "reference": "SVC",
+      "wilcoxon_p": 0.0
+    },
+    {
+      "family": "kernel",
+      "frac_reference_at_least_as_good": 0.991597,
+      "mean_diff": 0.220774,
+      "mean_diff_ci_high": 0.248475,
+      "mean_diff_ci_low": 0.194616,
+      "median_diff": 0.173333,
+      "model": "QuantumKitchenSinks",
+      "n_datasets": 119,
+      "reference": "SVC",
+      "wilcoxon_p": 0.0
+    },
+    {
+      "family": "kernel",
+      "frac_reference_at_least_as_good": 0.801527,
+      "mean_diff": 0.014537,
+      "mean_diff_ci_high": 0.021911,
+      "mean_diff_ci_low": 0.00729,
+      "median_diff": 0.0,
+      "model": "SeparableKernelClassifier",
+      "n_datasets": 131,
+      "reference": "SVC",
+      "wilcoxon_p": 0.00027
+    },
+    {
+      "family": "kernel",
+      "frac_reference_at_least_as_good": 0.577586,
+      "mean_diff": -0.000574,
+      "mean_diff_ci_high": 0.006862,
+      "mean_diff_ci_low": -0.007798,
+      "median_diff": 0.0,
+      "model": "ProjectedQuantumKernel",
+      "n_datasets": 116,
+      "reference": "SeparableKernelClassifier",
+      "wilcoxon_p": 0.827883
+    },
+    {
+      "family": "kernel",
+      "frac_reference_at_least_as_good": 0.722772,
+      "mean_diff": 0.021921,
+      "mean_diff_ci_high": 0.033888,
+      "mean_diff_ci_low": 0.0107,
+      "median_diff": 0.008,
+      "model": "IQPKernelClassifier",
+      "n_datasets": 101,
+      "reference": "SeparableKernelClassifier",
+      "wilcoxon_p": 0.000648
+    },
+    {
+      "family": "kernel",
+      "frac_reference_at_least_as_good": 0.966102,
+      "mean_diff": 0.206856,
+      "mean_diff_ci_high": 0.23353,
+      "mean_diff_ci_low": 0.180821,
+      "median_diff": 0.16,
+      "model": "QuantumKitchenSinks",
+      "n_datasets": 118,
+      "reference": "SeparableKernelClassifier",
+      "wilcoxon_p": 0.0
+    },
+    {
+      "family": "cnn",
+      "frac_reference_at_least_as_good": 0.833333,
+      "mean_diff": 0.024419,
+      "mean_diff_ci_high": 0.044591,
+      "mean_diff_ci_low": 0.005965,
+      "median_diff": 0.018,
+      "model": "QuanvolutionalNeuralNetwork",
+      "n_datasets": 6,
+      "reference": "ConvolutionalNeuralNetwork",
+      "wilcoxon_p": 0.125
+    },
+    {
+      "family": "cnn",
+      "frac_reference_at_least_as_good": 1.0,
+      "mean_diff": 0.340779,
+      "mean_diff_ci_high": 0.42487,
+      "mean_diff_ci_low": 0.255251,
+      "median_diff": 0.335153,
+      "model": "WeiNet",
+      "n_datasets": 8,
+      "reference": "ConvolutionalNeuralNetwork",
+      "wilcoxon_p": 0.007812
+    }
+  ],
+  "positivity_bias": {
+    "artifacts": [
+      "positivity_bias.csv"
+    ],
+    "experiment": "positivity_bias",
+    "fraction_quantum_above_classical": 1.0,
+    "paper_values": {
+      "classical": 0.65,
+      "quantum": 0.74
+    },
+    "published_classical_mean": 0.650254184845265,
+    "published_classical_std": 0.007201353056156494,
+    "published_quantum_mean": 0.7367681224709725,
+    "published_quantum_std": 0.005164161297478978,
+    "settings": {
+      "classical_mean": 0.65,
+      "classical_std": 0.07,
+      "first_seed": 0,
+      "n_designs": 20,
+      "n_researchers": 100,
+      "quantum_mean": 0.55,
+      "quantum_std": 0.1,
+      "repetitions": 1000
+    },
+    "source_run": "run_20261022-142749"
+  },
+  "source_run": "run_20261022-142739"
+}

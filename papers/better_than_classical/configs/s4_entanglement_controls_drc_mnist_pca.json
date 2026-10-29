@@ -1,0 +1,25 @@
+{
+  "description": "Stage S4 control added by this reproduction: DataReuploading with only the CZ entanglers removed (embedding unchanged), mnist pca d in {2,4,6,8}.",
+  "experiment": {
+    "kind": "grid_search",
+    "stage": "S4"
+  },
+  "dataset": {
+    "name": "mnist_pca",
+    "param": 2
+  },
+  "model": {
+    "name": "DataReuploadingClassifierNoCZ"
+  },
+  "sweep": {
+    "models": [
+      "DataReuploadingClassifierNoCZ"
+    ],
+    "dataset_params": [
+      2,
+      4,
+      6,
+      8
+    ]
+  }
+}

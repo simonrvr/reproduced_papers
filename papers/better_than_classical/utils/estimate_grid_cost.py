@@ -51,15 +51,15 @@ def estimate_costs(reference_root):
             continue
         cost_s = ((table["mean_fit_time"] + table["mean_score_time"]) * N_FOLDS).sum()
         rows.append(
-            dict(
-                bench=bench,
-                model=model,
-                file=os.path.basename(path),
-                first_int=int(match.group(1)) if match else -1,
-                n_grid=len(table),
-                cost_h=cost_s / 3600,
-                max_fit_s=table["mean_fit_time"].max(),
-            )
+            {
+                "bench": bench,
+                "model": model,
+                "file": os.path.basename(path),
+                "first_int": int(match.group(1)) if match else -1,
+                "n_grid": len(table),
+                "cost_h": cost_s / 3600,
+                "max_fit_s": table["mean_fit_time"].max(),
+            }
         )
     return pd.DataFrame(rows)
 

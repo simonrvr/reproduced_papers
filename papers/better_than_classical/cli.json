@@ -1,26 +1,77 @@
 {
-  "description": "Paper reproduction runner",
+  "description": "Bowles, Ahmed & Schuld (2024) benchmark reproduction: one experiment run (grid-search cell, port validation, re-analysis or positivity-bias simulation).",
   "arguments": [
     {
-      "flags": ["--epochs"],
-      "help": "Override number of training epochs",
-      "type": "int",
+      "flags": [
+        "--model"
+      ],
+      "help": "Model registry name for grid_search / score_best runs (e.g. DataReuploadingClassifier, SVC)",
+      "type": "str",
       "default": null,
-      "apply": {"kind": "config_path", "path": "training.epochs"}
+      "apply": {
+        "kind": "config_path",
+        "path": "model.name"
+      }
     },
     {
-      "flags": ["--batch-size"],
-      "help": "Override dataset batch size",
-      "type": "int",
+      "flags": [
+        "--dataset"
+      ],
+      "help": "Dataset name (linearly_separable, mnist_pca, mnist_pca_minus, mnist_pca_minus_released, hidden_manifold, hidden_manifold_diff, two_curves, two_curves_diff, hyperplanes_diff, bars_and_stripes)",
+      "type": "str",
       "default": null,
-      "apply": {"kind": "config_path", "path": "dataset.batch_size"}
+      "apply": {
+        "kind": "config_path",
+        "path": "dataset.name"
+      }
     },
     {
-      "flags": ["--lr"],
-      "help": "Override learning rate",
-      "type": "float",
+      "flags": [
+        "--dataset-param"
+      ],
+      "help": "Varied dataset quantity: number of features, manifold dimension, degree, number of hyperplanes or image width",
+      "type": "int",
       "default": null,
-      "apply": {"kind": "config_path", "path": "training.lr"}
+      "apply": {
+        "kind": "config_path",
+        "path": "dataset.param"
+      }
+    },
+    {
+      "flags": [
+        "--sweep-id"
+      ],
+      "help": "Sweep identifier recorded in run_status.json (set by the sweep coordinator)",
+      "type": "str",
+      "default": null,
+      "apply": {
+        "kind": "config_path",
+        "path": "sweep_id"
+      }
+    },
+    {
+      "flags": [
+        "--run-id"
+      ],
+      "help": "Run identifier recorded in run_status.json (set by the sweep coordinator; default: run directory name)",
+      "type": "str",
+      "default": null,
+      "apply": {
+        "kind": "config_path",
+        "path": "run_id"
+      }
+    },
+    {
+      "flags": [
+        "--repetition"
+      ],
+      "help": "Repetition index recorded in run_status.json (set by the sweep coordinator)",
+      "type": "int",
+      "default": null,
+      "apply": {
+        "kind": "config_path",
+        "path": "repetition"
+      }
     }
   ]
 }

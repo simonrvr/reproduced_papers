@@ -1,3 +1,5 @@
+"""Shared-runtime wiring: the paper is discovered and its runner is called."""
+
 from __future__ import annotations
 
 import os
@@ -9,8 +11,8 @@ import runtime_lib.runtime as runtime_module
 from runtime_lib import run_from_project
 
 
-def test_placeholder(monkeypatch, tmp_path):
-    recorded: dict[str, Path] = {}
+def test_runtime_calls_runner_with_cli_overrides(monkeypatch, tmp_path):
+    recorded: dict[str, object] = {}
 
     def fake_import_callable(name: str):
         assert name == "lib.runner.train_and_evaluate"
@@ -18,8 +20,6 @@ def test_placeholder(monkeypatch, tmp_path):
         def _runner(cfg, run_dir: Path):
             recorded["cfg"] = cfg
             recorded["run_dir"] = run_dir
-            run_dir.mkdir(parents=True, exist_ok=True)
-            (run_dir / "done.txt").write_text("ok", encoding="utf-8")
 
         return _runner
 
@@ -28,10 +28,20 @@ def test_placeholder(monkeypatch, tmp_path):
     try:
         run_dir = run_from_project(
             PROJECT_DIR,
-            ["--epochs", "1", "--outdir", str(tmp_path)],
+            [
+                "--model",
+                "LogisticRegression",
+                "--dataset-param",
+                "4",
+                "--outdir",
+                str(tmp_path),
+            ],
         )
     finally:
         os.chdir(original_cwd)
 
-    assert recorded.get("run_dir") == run_dir
-    assert (run_dir / "done.txt").exists()
+    assert recorded["run_dir"] == run_dir
+    cfg = recorded["cfg"]
+    assert cfg["model"]["name"] == "LogisticRegression"
+    assert cfg["dataset"]["param"] == 4
+    assert (run_dir / "config_snapshot.json").exists()

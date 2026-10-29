@@ -1,0 +1,17 @@
+{
+  "description": "Stage S1 / E12: positivity-bias simulation of Fig. 3 (100 researchers, best of 20 quantum designs) with the paper's distributions, repeated over 1000 seeds.",
+  "experiment": {
+    "kind": "positivity_bias",
+    "stage": "S1"
+  },
+  "positivity_bias": {
+    "n_researchers": 100,
+    "n_designs": 20,
+    "quantum_mean": 0.55,
+    "quantum_std": 0.1,
+    "classical_mean": 0.65,
+    "classical_std": 0.07,
+    "repetitions": 1000,
+    "first_seed": 0
+  }
+}

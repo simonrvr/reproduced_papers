@@ -1,0 +1,26 @@
+{
+  "description": "Stage S4 (E5, Fig. 13): released entanglement-free variants of DressedQC and DataReuploading on mnist pca d in {2,4,6,8} (parents come from S3).",
+  "experiment": {
+    "kind": "grid_search",
+    "stage": "S4"
+  },
+  "dataset": {
+    "name": "mnist_pca",
+    "param": 2
+  },
+  "model": {
+    "name": "DressedQuantumCircuitClassifierSeparable"
+  },
+  "sweep": {
+    "models": [
+      "DressedQuantumCircuitClassifierSeparable",
+      "DataReuploadingClassifierSeparable"
+    ],
+    "dataset_params": [
+      2,
+      4,
+      6,
+      8
+    ]
+  }
+}
